@@ -1,19 +1,6 @@
 import React, { Component } from 'react';
 
 class TabSelector extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeId: 'home'
-    };
-    this.handleChangeTab = this.handleChangeTab.bind(this);
-  }
-
-  handleChangeTab(event) {
-    const buttonId = event.target.id;
-    this.setState({ activeId: buttonId });
-  }
-
   render() {
     const { activeId } = this.state;
     return (
