@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TabSelector from './TabSelector';
 import './App.css';
 
@@ -7,7 +7,7 @@ const About = () => <p>This challenge is about tabs!</p>;
 const Contact = () => <p>Feel free to contact us!</p>;
 const Error = () => <p>Something went <strong>wrong</strong>!</p>;
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TabSelector activeId={this.state.activeId} handleChangeTab={this.handleChangeTab}/>/>
+        <TabSelector activeId={this.state.activeId} handleChangeTab={this.handleChangeTab}/>
         <div className="App-content">
           {
             this.getTabContent()
@@ -48,4 +48,3 @@ class App extends Component {
 }
 
 export default App;
-

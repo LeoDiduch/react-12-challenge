@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TabSelector extends Component {
+class TabSelector extends React.Component { 
   render() {
-    const { activeId } = this.state;
     return (
       <div className="TabSelector">
         <button
           id="home"
-          onClick={this.handleChangeTab}
-          className={activeId === 'home' ? 'active' : ''}
+          onClick={this.props.handleChangeTab}
+          className={this.props.activeId === 'home' ? 'active' : ''}
         >
           Home
         </button>
         <button
           id="about"
-          onClick={this.handleChangeTab}
-          className={activeId === 'about' ? 'active' : ''}
+          onClick={this.props.handleChangeTab}
+          className={this.props.activeId === 'about' ? 'active' : ''}
         >
+          />
           About
         </button>
         <button
           id="contact"
-          onClick={this.handleChangeTab}
-          className={activeId === 'contact' ? 'active' : ''}
+          onClick={this.props.handleChangeTab}
+          className={this.props.activeId === 'contact' ? 'active' : ''}
         >
           Contact
         </button>
