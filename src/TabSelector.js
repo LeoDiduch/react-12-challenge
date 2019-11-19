@@ -16,7 +16,6 @@ class TabSelector extends React.Component {
           onClick={this.props.handleChangeTab}
           className={this.props.activeId === 'about' ? 'active' : ''}
         >
-          />
           About
         </button>
         <button
